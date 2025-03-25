@@ -10,7 +10,32 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
+  <style>
+    body {
+      background-image: url(./images/Immagine\ WhatsApp\ 2024-10-02\ ore\ 11.52.46_51c465e0.jpg);
+    }
+
+    h1 {
+      font-size: 105px;
+      letter-spacing: -4px;
+      font-weight: 900;
+      text-align: center;
+      color: rgb(184, 81, 81);
+    }
+
+    .card {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
   <body class="d-flex flex-column min-vh-100 bg-secondary">
     <header>
       <nav class="navbar navbar-expand-lg bg-dark">
@@ -95,16 +120,19 @@
       </nav>
     </header>
     <hr class="mb-1 mt-0" style="color: red" />
+    <div class="container">
+      <div id="shppoing"></div>
+    </div>
     <main class="flex-grow-1">
       <h1 class="text-center mt-0">Red and White WINE</h1>
-      <h2 class="text-center fs-1 text-black">Compra qua il tuo vino!</h2>
-      <div class="container">
-        <div class="row" id="cards-row"></div>
 
-        <!-- DEVO CREARE DELLE CARDS -->
+      <div class="container-fluid d-flex justify-content-center">
+        <div class="row" id="cards-row">
+          <!-- DEVO CREARE DELLE CARDS -->
+        </div>
       </div>
     </main>
-    <footer>
+    <footer class="pt-5">
       <p class="p-1 m-o bg-dark text-light text-center mb-0">
         <b>WINE EXPERIENCE -</b><span id="year"></span>
       </p>
