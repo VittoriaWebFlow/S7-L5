@@ -11,6 +11,28 @@
       crossorigin="anonymous"
     />
   </head>
+  <style>
+    body {
+      background-image: url(./images/Immagine\ WhatsApp\ 2024-10-02\ ore\ 11.52.46_51c465e0.jpg);
+    }
+
+    h1 {
+      font-size: 105px;
+      letter-spacing: -4px;
+      font-weight: 900;
+      text-align: center;
+      color: rgb(195, 99, 99);
+    }
+
+    h2 {
+      font-size: 50px;
+      letter-spacing: +2px;
+      font-weight: 900;
+      font-style: italic;
+      text-align: center;
+      color: rgb(204, 167, 167);
+    }
+  </style>
   <body class="d-flex flex-column min-vh-100 bg-secondary">
     <header>
       <nav class="navbar navbar-expand-lg bg-dark">
@@ -40,7 +62,7 @@
                 <a
                   class="nav-link active text-light"
                   aria-current="page"
-                  href="#"
+                  href="./index.html"
                   >Home</a
                 >
               </li>
@@ -94,14 +116,48 @@
         </div>
       </nav>
     </header>
-    <hr class="mb-1 mt-0" style="color: red" />
+    <hr class="mb-1 mt-0" style="color: rgb(195, 99, 99)" />
     <main class="flex-grow-1">
       <h1 class="text-center mt-0">Red and White WINE</h1>
-      <h2 class="text-center fs-1 text-black">Dettagli ordine!</h2>
+      <h2 class="text-center">Shopping cart</h2>
       <div class="container">
-        <div class="row" id="cards-row"></div>
-
-        <!-- DEVO CREARE DELLE CARDS -->
+        <div class="row justify-content-center">
+          <div class="col col-12 col-lg-6 col-md-8">
+            <div class="col col-12 col-sm-6 col-md-3 mb-3">
+              <div
+                class="card mt-4 bg-black rounded-3 shadow-lg border-0 ms-3"
+                style="width: 90%"
+              >
+                <img
+                  src=""
+                  class="mb-5 card-img-top"
+                  alt=""
+                  style="height: 100%; object-fit: cover"
+                />
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title text-light mb-3" id="title"></h5>
+                  <p class="card-text fs-5 text-light mt-2" id="testo"></p>
+                  <p
+                    class="card-text text-light fs-4 flex-grow-1"
+                    id="price"
+                  ></p>
+                  <a
+                    href="details.html"
+                    class="btn btn-dark rounded-5 d-flex justify-content-center mt-auto"
+                    >Details</a
+                  >
+                  <button
+                    id="deleteButton"
+                    class="btn btn-dark rounded-5 d-flex justify-content-center mt-2"
+                    onclick="skipMe(event)"
+                  >
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <footer>
