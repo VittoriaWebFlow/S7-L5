@@ -29,20 +29,26 @@ const getYear = function () {
 
         const row = document.getElementById('cards-row')
         data.forEach((wine) => {
-            row.innerHTML =
-            row.innerHTML + 
+            row.innerHTML =  row.innerHTML + 
+           
             ` 
-            <div class= col col-12 col-lg-3 col-md-4 col-sm-6>
-            <div class="card " >
-  <img src="https://www.cambusawine.com/wp-content/uploads/2016/07/20160703_103039-1.jpeg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">${Wines.name}</h5>
-    <p class="card-text">${Wines.description}</p>
-     <p class="card-text">${Wines.brand} - ${Wines.price}€</p>
-    
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class=" col col-12 col-sm-6 col-md-3 mb-3">
+  <div class="card mt-4 bg-black rounded-3 shadow-lg border-0 ms-3 " style="width: 90%;">
+    <img src="${wine.imageUrl}" class="mb-5 card-img-top " alt="${wine.name}" style="height: 100%; object-fit: cover;">
+    <div class="card-body d-flex flex-column ">
+      <h5 class="card-title text-light mb-3">${wine.name}</h5>
+      <p class="card-text fs-5 text-light mt-2">${wine.brand}</p>
+      <p class="card-text text-light fs-4 flex-grow-1">${wine.price}€</p>
+      <a href="details.html?id=${wine._id}" class="btn btn-dark rounded-5 d-flex justify-content-center mt-auto">Add to cart!</a>
+       <button id="deleteButton" class="btn btn-dark rounded-5 d-flex justify-content-center  mt-2 " onclick="skipMe(event)">
+                        Delete
+                      </button>
+    </div>
   </div>
 </div>` 
+
+
+
         })
     })
     .catch((err) => {
@@ -50,4 +56,15 @@ const getYear = function () {
     })
 }
 
+function skipMe(event) {
+    event.preventDefault();
+    const card = event.target.closest('.col');
+    if (card) {
+        card.classList.add('d-none');
+    }
+}
+
 prodotti()
+
+
+
