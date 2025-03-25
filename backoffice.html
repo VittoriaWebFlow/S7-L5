@@ -11,6 +11,28 @@
       crossorigin="anonymous"
     />
   </head>
+  <style>
+    body {
+      background-image: url(./images/Immagine\ WhatsApp\ 2024-10-02\ ore\ 11.52.46_51c465e0.jpg);
+    }
+
+    h1 {
+      font-size: 105px;
+      letter-spacing: -4px;
+      font-weight: 900;
+      text-align: center;
+      color: rgb(195, 99, 99);
+    }
+
+    h2 {
+      font-size: 50px;
+      letter-spacing: +2px;
+      font-weight: 900;
+      font-style: italic;
+      text-align: center;
+      color: rgb(204, 167, 167);
+    }
+  </style>
   <body class="d-flex flex-column min-vh-100 bg-secondary">
     <header>
       <nav class="navbar navbar-expand-lg bg-dark">
@@ -94,17 +116,19 @@
         </div>
       </nav>
     </header>
-    <hr class="mb-1 mt-0" style="color: red" />
+    <hr class="mb-1 mt-0" style="color: rgb(195, 99, 99)" />
     <main class="flex-grow-1">
       <h1 class="text-center mt-0">Red and White WINE</h1>
-      <h2 class="text-center fs-1 text-black">Compose your list!</h2>
+      <h2 class="text-center">Compose your list!</h2>
       <div class="container">
         <div class="row justify-content-center">
           <div class="col col-12 col-lg-6 col-md-8">
             <form class="my-3" id="form">
               <input type="hidden" id="productId" />
               <div class="mb-3">
-                <label class="form-label">Wine name</label>
+                <label class="form-label text-light fs-5 fst-italic"
+                  ><b>WINE NAME</b></label
+                >
                 <input
                   type="text"
                   class="form-control"
@@ -114,8 +138,8 @@
                 />
               </div>
               <div class="mb-3">
-                <label class="form-label"
-                  >Technical description of the wine</label
+                <label class="form-label text-light fs-5 fst-italic"
+                  ><b>TECHNICAL description of the WINE</b></label
                 >
                 <textarea
                   class="form-control"
@@ -125,7 +149,9 @@
                 ></textarea>
               </div>
               <div class="mb-3">
-                <label class="form-label">Brand</label>
+                <label class="form-label text-light fs-5 fst-italic"
+                  ><b>BRAND</b></label
+                >
                 <input
                   type="text"
                   class="form-control"
@@ -134,7 +160,9 @@
                 />
               </div>
               <div class="mb-3">
-                <label class="form-label">Immagine URL</label>
+                <label class="form-label text-light fs-5 fst-italic"
+                  ><b>Immagine URL</b></label
+                >
                 <input
                   type="text"
                   class="form-control"
@@ -143,7 +171,9 @@
                 />
               </div>
               <div class="mb-3">
-                <label class="form-label">Price(€)</label>
+                <label class="form-label text-light fs-5 fst-italic"
+                  ><b>PRICE(€)</b></label
+                >
                 <input
                   type="number"
                   class="form-control"
@@ -151,16 +181,18 @@
                   placeholder="20€"
                 />
               </div>
-              <button type="submit" class="btn btn-dark border-danger">
-                Save Product!
-              </button>
-              <button
-                type="button"
-                class="btn btn-dark border-danger"
-                onclick="resetForm()"
-              >
-                Reset
-              </button>
+              <div class="d-flex justify-content-center m-4">
+                <button type="submit" class="btn btn-dark mx-2">
+                  Save Product!
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-dark"
+                  onclick="resetForm()"
+                >
+                  Reset
+                </button>
+              </div>
             </form>
           </div>
         </div>
